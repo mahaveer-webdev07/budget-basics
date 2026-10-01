@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Impulse Buying",
+    "topic": "spending",
+    "scenario": "Buying something during a sale without planning for it.",
+    "fix": "Wait 24 hours before buying — if you still want it after that, go ahead."
+  },
+  {
+    "title": "Ignoring Small Expenses",
+    "topic": "expenses",
+    "scenario": "Spending rs.100 daily on tea/snacks adds up to rs.3000 a month.",
+    "fix": "Track even your small daily expenses."
+  },
+  {
+    "title": "Late Payments",
+    "topic": "budgeting",
+    "scenario": "Not paying a bill on time and getting charged a late fee.",
+    "fix": "Set reminders or use auto-pay for recurring bills."
+  },
+  {
+    "title": "Unused Subscriptions",
+    "topic": "expenses",
+    "scenario": "Paying for Netflix/Spotify that you barely use.",
+    "fix": "Review your subscriptions every 3 months."
+  },
+  {
+    "title": "Spending Without a Plan",
+    "topic": "budgeting",
+    "scenario": "Going through the month with no budget at all.",
+    "fix": "Follow the 50-30-20 rule at the start of every month."
+  }
+]

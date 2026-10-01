@@ -1,0 +1,395 @@
+.navbar-wrapper {
+  position: sticky;
+  top: 16px;
+  z-index: 100;
+  padding: 0 24px;
+  transition: top 0.25s ease, padding 0.25s ease;
+}
+
+/* Once the page is scrolled, the VisitorClock bar above the navbar hides
+   itself (see VisitorClock.css), so the navbar moves all the way up to
+   the top of the viewport instead of leaving that space empty. */
+.navbar-wrapper.navbar-scrolled {
+  top: 0;
+  padding: 0;
+}
+
+.navbar-container {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 22px;
+  min-height: 74px;
+  gap: 12px;
+  transition: border-radius 0.25s ease, min-height 0.25s ease, padding 0.25s ease;
+}
+
+.navbar-scrolled .navbar-container {
+  border-radius: 0;
+  min-height: 64px;
+  padding: 10px 22px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.brand-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.brand-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-title-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.brand-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--text-color);
+}
+
+.brand-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  display: inline-block;
+}
+
+.brand-subtitle {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  padding-top: 2px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.navbar-links::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav-link:hover {
+  color: var(--text-color);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.theme-toggle-btn {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.nav-signin-btn {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.nav-signin-btn:hover {
+  color: var(--accent-color);
+}
+
+.nav-getstarted-btn {
+  background: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 9px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.nav-getstarted-btn:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.hamburger-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-color);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.mobile-menu-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 24px;
+  right: 24px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 200;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: max-height 0.32s ease, opacity 0.22s ease, transform 0.28s ease, padding 0.32s ease;
+}
+
+.mobile-menu-panel.open {
+  max-height: 80vh;
+  opacity: 1;
+  padding: 12px;
+  pointer-events: auto;
+  transform: translateY(0);
+  overflow-y: auto;
+}
+
+.mobile-nav-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.mobile-nav-link:hover {
+  background: var(--accent-soft);
+  color: var(--accent-color);
+}
+
+.mobile-logout {
+  color: #ef4444;
+}
+
+.mobile-menu-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 6px 0;
+}
+
+.nav-account-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.nav-account-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-soft);
+  border-radius: var(--radius-pill);
+  padding: 6px 14px 6px 6px;
+  white-space: nowrap;
+}
+
+.nav-account-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nav-account-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-color);
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* IMPORTANT: these two media queries must stay at the very bottom of this
+   file, after every base rule above (including .hamburger-btn and
+   .nav-account-group). CSS resolves equal-specificity rules by source
+   order, not by which one is "more conditional" - so if a plain,
+   always-on rule for the same selector appeared later in the file than a
+   media query targeting it, the plain rule would win even while the media
+   query's condition was true, and the override would silently do nothing.
+   That was the actual bug behind the navbar never collapsing on small
+   screens in earlier versions of this file. */
+
+/* The 8 page links only reliably fit alongside the logo, search, chatbot,
+   theme and account icons on very wide windows. Below that, always use the
+   animated hamburger menu instead of letting the links row get squeezed
+   down to nothing. */
+@media (max-width: 1300px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .nav-signin-btn,
+  .nav-getstarted-btn,
+  .nav-account-group {
+    display: none;
+  }
+}
+
+/* Small phones: the brand text + search/chatbot/theme/hamburger icons no
+   longer fit on one row, so trim the brand and move search/chatbot into
+   the hamburger menu, keeping just theme toggle + hamburger in the bar. */
+@media (max-width: 480px) {
+  .navbar-wrapper {
+    top: 10px;
+    padding: 0 12px;
+  }
+
+  .navbar-container {
+    padding: 10px 12px;
+    min-height: 62px;
+    gap: 6px;
+  }
+
+  .navbar-brand {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .brand-title {
+    font-size: 0.9rem;
+  }
+
+  .navbar-actions {
+    gap: 6px;
+  }
+
+  .nav-icon-search,
+  .nav-icon-chatbot {
+    display: none;
+  }
+
+  .theme-toggle-btn,
+  .hamburger-btn {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  .mobile-menu-panel {
+    left: 12px;
+    right: 12px;
+  }
+}

@@ -1,0 +1,58 @@
+[
+    {
+        "q": "what is a need",
+        "a": "A need is something essential like food, rent, or transport — something you can't really do without."
+    },
+    {
+        "q": "what is a want",
+        "a": "A want is something that's nice to have but not essential — like games or branded items."
+    },
+    {
+        "q": "how much should i save",
+        "a": "Following the 50-30-20 rule, it's a good idea to keep 20% of your income for savings, 50% for needs, and 30% for wants."
+    },
+    {
+        "q": "how do i avoid overspending",
+        "a": "Make a budget every month, track your expenses, and before buying something ask yourself: Is it essential now?"
+    },
+    {
+        "q": "what is the 50-30-20 rule",
+        "a": "It's a simple budgeting split: 50% of your income goes to needs, 30% to wants, and 20% to savings. You can try it live in the 50-30-20 section above."
+    },
+    {
+        "q": "how do i start budgeting",
+        "a": "Start by listing your income, then your fixed expenses (rent, subscriptions), then variable ones (food, transport). Check the Budgeting Basics section above for a full example."
+    },
+    {
+        "q": "how do i set a savings goal",
+        "a": "Head to the Savings Goals section — enter your target amount, what you've already saved, and your monthly contribution, and it'll tell you how many months you need."
+    },
+    {
+        "q": "what are common money mistakes",
+        "a": "Impulse buying, not tracking expenses, missing bill payments, and not saving anything each month are the most common ones. See the Money Mistakes section above for details and fixes."
+    },
+    {
+        "q": "how do i track my expenses",
+        "a": "Use the Planner — click 'Planner' in the navbar, add an expense with its amount, category, and date, and it'll show up in your live spending analytics."
+    },
+    {
+        "q": "do i need to sign in to use the planner",
+        "a": "No — you can use the Planner as a guest. Signing in just lets your data be saved to your account instead of only for this session."
+    },
+    {
+        "q": "is my data safe",
+        "a": "Yes. Your data is only stored on your own device via your browser's local storage when you're signed in — nothing is sent to an external server. As a guest, nothing is saved at all."
+    },
+    {
+        "q": "how do i change the currency",
+        "a": "In the Planner, use the Currency dropdown next to the amount field — it supports PKR, USD, and EUR."
+    },
+    {
+        "q": "how do i switch between light and dark mode",
+        "a": "Click the sun/moon icon in the navbar to toggle between light and dark themes. Your preference is remembered automatically."
+    },
+    {
+        "q": "what is fixed expense",
+        "a": "A fixed expense stays the same every month — like hostel rent or a subscription. Variable expenses, like food or transport, tend to change month to month."
+    }
+]

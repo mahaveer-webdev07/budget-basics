@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Rent / Hostel Fee",
+    "correct": "need",
+    "why": "Having a place to live is essential — this is a basic Need."
+  },
+  {
+    "name": "Groceries / Food",
+    "correct": "need",
+    "why": "Food is a basic human necessity — a Need."
+  },
+  {
+    "name": "Latest Video Game",
+    "correct": "want",
+    "why": "Entertainment is nice to have, but it's not essential — a Want."
+  },
+  {
+    "name": "Bus / Transport Fare",
+    "correct": "need",
+    "why": "Getting to college or work is essential — a Need."
+  },
+  {
+    "name": "Branded Sneakers",
+    "correct": "want",
+    "why": "Regular shoes can do the job just fine — this is a Want."
+  },
+  {
+    "name": "Course Books",
+    "correct": "need",
+    "why": "Required for studying — a Need."
+  },
+  {
+    "name": "Streaming Subscription (Netflix)",
+    "correct": "want",
+    "why": "It's entertainment, not essential — a Want."
+  },
+  {
+    "name": "Electricity / Utility Bill",
+    "correct": "need",
+    "why": "A basic necessity for running a household — a Need."
+  }
+]

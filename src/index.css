@@ -1,0 +1,135 @@
+:root {
+  --bg-color: #f8fafc;
+  --text-color: #0f172a;
+  --text-muted: #64748b;
+  --card-bg: #ffffff;
+  --card-bg-elevated: #f1f5f9;
+
+  --accent-color: #FF5722;
+  --accent-hover: #e64a19;
+  --accent-soft: rgba(255, 87, 34, 0.12);
+
+  --border-color: #e2e8f0;
+  --nav-bg: rgba(255, 255, 255, 0.85);
+
+  --shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.05),
+    0 8px 10px -6px rgba(0, 0, 0, 0.05);
+
+  --shadow-lg:
+    0 20px 30px -10px rgba(0, 0, 0, 0.08);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  --font-sans:
+    'Inter',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+
+  --font-serif:
+    'Playfair Display',
+    Georgia,
+    serif;
+}
+
+.dark {
+  --bg-color: #0b0f17;
+  --text-color: #f8fafc;
+  --text-muted: #94a3b8;
+
+  --card-bg: #131b26;
+  --card-bg-elevated: #1a2434;
+
+  --accent-color: #FF5722;
+  --accent-hover: #e64a19;
+  --accent-soft: rgba(255, 87, 34, 0.14);
+
+  --border-color: #1e293b;
+  --nav-bg: rgba(19, 27, 38, 0.85);
+
+  --shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.35),
+    0 8px 10px -6px rgba(0, 0, 0, 0.25);
+
+  --shadow-lg:
+    0 20px 35px -10px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.25s ease, color 0.25s ease;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.page-background {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+/* Full-width sections */
+.onepage-section {
+  width: 100%;
+  scroll-margin-top: 90px;
+}
+
+/* Educational sections use both classes. Keeping their layout in one place
+   prevents two separate padding systems from creating empty vertical bands. */
+.onepage-section.content-page {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 56px 40px;
+  min-height: 0;
+}
+
+.onepage-section:nth-of-type(even) {
+  background-color: var(--card-bg-elevated);
+}
+
+/* Keep content centered without creating unwanted side gaps */
+.onepage-section>.content-page {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .onepage-section.content-page {
+    gap: 24px;
+    padding: 44px 16px;
+  }
+}

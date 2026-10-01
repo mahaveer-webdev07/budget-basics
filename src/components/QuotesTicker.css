@@ -1,0 +1,37 @@
+.quotes-ticker {
+    width: 100%;
+    overflow: hidden;
+    background: var(--accent-soft, #fff3e6);
+    border-bottom: 1px solid var(--border-color);
+    padding: 8px 0;
+}
+
+.quotes-ticker-track {
+    display: flex;
+    gap: 48px;
+    white-space: nowrap;
+    animation: ticker-scroll 30s linear infinite;
+    width: max-content;
+}
+
+.quotes-ticker-item {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+@keyframes ticker-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .quotes-ticker-track {
+        animation: none;
+    }
+}

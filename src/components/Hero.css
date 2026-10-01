@@ -1,0 +1,253 @@
+.hero-section {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+}
+
+.hero-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero-badge {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.hero-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+.hero-heading {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.08;
+}
+
+.hero-heading-main {
+  font-size: 3.4rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-color);
+}
+
+.hero-heading-accent {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--accent-color);
+  letter-spacing: normal;
+  margin-top: 4px;
+}
+
+.hero-description {
+  font-size: 1.12rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 520px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.hero-highlights span::first-letter {
+  color: var(--accent-color);
+}
+
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0 8px 20px -4px var(--accent-soft);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.hero-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: visible;
+}
+
+.hero-visual-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  overflow: visible;
+}
+
+.hero-visual-img {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  object-fit: contain;
+  transform: scale(1.12);
+  transform-origin: center center;
+}
+
+.console-target {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.target-highlight {
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.console-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.console-stat-box {
+  background: var(--card-bg-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.stat-box-remaining {
+  background: var(--accent-soft);
+  border-color: var(--accent-color);
+}
+
+.stat-label {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.stat-box-remaining .stat-label {
+  color: var(--accent-color);
+}
+
+.stat-value {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--text-color);
+}
+
+.stat-box-remaining .stat-value {
+  color: var(--accent-color);
+}
+
+@media (max-width: 960px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-heading-main {
+    font-size: 2.5rem;
+  }
+
+  .hero-heading-accent {
+    font-size: 3rem;
+  }
+
+  .hero-visual-wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+ .hero-visual-img {
+   display: block;
+   width: 100%;
+   max-width: 760px;
+   height: auto;
+   object-fit: contain;
+
+   /* image ko left shift + thoda large */
+   transform: translateX(-90px) scale(1.12);
+   transform-origin: center center;
+ }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 24px 16px 44px;
+  }
+
+  .hero-heading-main {
+    font-size: 2.1rem;
+  }
+
+  .hero-heading-accent {
+    font-size: 2.6rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-highlights {
+    gap: 8px 14px;
+    font-size: 0.78rem;
+  }
+
+  .hero-visual-wrapper {
+    max-width: 100%;
+  }
+
+  .hero-visual-img {
+    max-width: 100%;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,8 @@
+# https://www.budgetbasic.app/robots.txt
+User-agent: *
+Allow: /
+Disallow: /auth
+Disallow: /dashboard
+Disallow: /search
+
+Sitemap: https://www.budgetbasic.app/sitemap.xml
